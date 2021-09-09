@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+		ul{
+			list-style-type:none;
+		}
+		.nav{
+			width:600px;
+			height:400px;
+			margin:200px auto;
+			text-align:center;
+		}
+		.nav ul{
+			display:none;
+		}
+		.item{
+			float:left;
+			width:200px;
+		}
+		.item a{
+			text-decoration:none;
+			padding:38px 50px;
+			display:block;
+			background-color: #f7f7f7;
+		}
+		.item li{
+			padding:38px 50px;
+			background-color:red;
+
+		}
+		.item .current{
+			background-color:#c81623;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li class='item'>
+			<a href="#" class='current'>1</a>
+			<ul >
+				<li>1</li><li>2</li><li>3</li>
+			</ul>
+		</li>
+		<li class='item'>
+			<a href="#">2</a>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</li>
+		<li class='item'>
+			<a href="#">3</a>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</li>
+	</ul>
+	<script type="text/javascript">
+		var nav = document.querySelector('.nav');
+		var lis = nav.children;
+		for (var i = 0; i < lis.length;i++ )
+		{
+      //点击显示下拉
+			lis[i].onclick = function(){
+      
+				for (var i = 0 ;i < lis.length ;i++)
+				{
+					lis[i].children[0].className = '';
+					lis[i].children[1].style.display = 'none';
+				}
+				this.children[0].className = 'current';
+				this.children[1].style.display = 'block';
+			}
+      //鼠标悬浮显示下拉
+			lis[i].onmouseover = function(){
+				this.children[1].style.display = 'block';
+			}
+      //鼠标离开下拉消失
+			lis[i].onmouseout = function(){
+				this.children[1].style.display = 'none';
+			}
+		}
+	</script>
+</body>
+</html>
