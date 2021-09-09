@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> 渐变——天际线</title>
+  <style type="text/css">
+  //先生成一张渐变色 然后放大 根据调整背景位置 实现渐变变化效果
+	body{
+	  margin: 0;
+	  padding: 0;
+	  background-image: linear-gradient(125deg,#E4FFCD,#6DD5FA,#2980B9,#E4FFCD);
+	  background-size: 200%;
+	  animation: bganimation 15s infinite;
+	}
+	 
+	.text{
+	  color: white;
+	  text-align: center;
+	  margin: 400px 0;
+	  font-size: 22px;
+	}
+	 
+	@keyframes bganimation {
+	  0%{
+		background-position: 0% 50%;
+	  }
+	  50%{
+		background-position: 100% 50%;
+	  }
+	  100%{
+		background-position: 0% 50%;
+	  }
+	}
+  </style>
+</head>
+<body>
+   <div class="text">
+      渐变——天际线
+    </div>
+</body>
+</html>
