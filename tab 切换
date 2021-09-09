@@ -25,16 +25,13 @@
 		}
 		.tab_list li{
 			padding:10px 25px;
-			position: relative;
+			position:relative;
 			display:inline-block;
 						
 		}
 		.tab_list .current{
 			background-color:#c81623;
 			color:#fff;
-		}
-		.item_info{
-			padding:20px 0  0 20px;
 		}
 		.item{
 			display: none;
