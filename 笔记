@@ -1,0 +1,1171 @@
+prompt输入框
+	prompt()
+alert警示框
+	alert()
+console控制输出 测试使用
+	console.log()
+isNaN判断是否非数字
+	isNaN(x) 是数字返回false 不是数字返回true
+字符串转义符
+	\n 换行
+	\\斜杠
+	\'单引号
+	\*双引号
+	\t tab
+	\b 空格
+length获取字符串的长度
+	var str='shjkh'
+	console.log(str.length)//6
+布尔型 true值为1 false值为 0 
+变量声明未赋值 undefined 未定义 
+	var variable=undefined
+	console.log（variable+'ljh'） //undefinedljh
+	console.log（variable+1） //NaN 不是数字
+null 空值
+	val space=null
+	console.log（space+'ljh'） //nullljh
+	console.log（space+1） //1
+typeof 检测变量类型    判断用户输入内容（防止乱填） 输出的数字是黑色字符串 蓝色数字 //prompt的值是字符型
+	var num=10
+	console.log（typeof num）//number
+	var str=‘阿萨德’
+	console.log（typeof str）//string
+	....还有boolean、undefined、null类型 null=object
+转换为字符串
+	toString() 
+	把数字类型转换成字符串型
+		var num =10 ;
+		var str=num.toString();
+		console.log(str);
+	String()强制转换
+		console.log(String(num));
+	加号拼接字符串转换
+		console.log(num+"");
+转换成数值型
+	parseint()  //转换成数字型 得到是整数
+		console.log(parseint('3')) //3
+		console.log(parseint('3.14')) //3
+		console.log(parseint('120px')) //120
+	parseFloat(变量) //注意单词大小写
+		console.log(parseFloat('3.14')) //3.14
+		console.log(parseFloat('120px')) //120
+		console.log(parseFloat('rem120px')) //120
+	Number(变量)
+		var str='123'
+		console.log(Number(str));
+		console.log(Number('12'));
+	算数运算 - * / 隐式转换   +是连接
+		console.log('12' - 0 ); // 12
+		console.log('12' - ‘10’ )
+转换成布尔型
+	Boolean() //代表空、否定的值会被转换为false，如“、0、NaN、null、undefined” 其余值转换成true
+	console.log(Boolean(''));//false
+	console.log(Boolean(0));//false
+	console.log(Boolean(NaN));//false
+	console.log(Boolean(null));//false
+	console.log(Boolean(undefined));//false
+	console.log(Boolean(12));//true	
+	console.log(Boolean('阿萨德'));//true
+算数运算符 （浮点运算符会有问题；不能判断两个浮点数是否相同）先乘除后加减
+	+-*/% 加减乘除取余
+	console.log(0.1+0.2)；//0.30000000004
+	console.log(0.07+100)；//7.0000000001
+	var num=0.1+0.2
+比较运算符
+逻辑运算符
+	&&与  and 两者都为true 结果true  有一个为false 结果为false
+		console.log(3>5 && 3>2)//false
+		console.log(3<5 && 3>2)//true
+	||   或  or  两者都为false 结果false  有一个为false 结果为true
+		console.log(3>5 || 3>2)//true
+		console.log(3>5 || 3<2)//false
+	！ 非 not
+	console.log(!true)//false
+三元表达式 条件表达式？表达式1 ：表达式2 （条件表达式为真返回表达式1，否则返回表达式2）
+	var num=10；
+	var result =num>5? '是的' ：‘不是的’	；
+	console.log（result）
+分支语句
+	if 分支语句
+	if else 双分支语句
+	if else if 多分支语句
+	switch 语句 有固定值使用这个
+循环
+	for 循环
+	while 循环
+	do while 循环
+	{打印正三角、倒三角、九九乘法表、N行N列打印}
+	continue 跳过这次循环 执行下一次循环
+	break 停止后面的循环
+数组
+	数组创建
+		var arr=new Array()； //空数组
+		var arr=new Array(2)；//空数组 2表示数组长度为2   2分空的数组元素
+		var arr= new Array(2，3);等价于var arr=[‘2’，‘3’];
+		var arr=[]； //空数组
+		var arr=['1','2'];//数组赋值
+	数组访问
+		arr[1],arr[i] 索引号0开始
+	获取数组长度
+		arr.length 动态尖刺数组元素的个数
+数组求和及平均值
+	var arr = [2,1,7,4];
+	var sum = 0;
+	var avg = 0;
+	for (var i = 0 , i < arr.length,i ++) {
+		sum += arr[i];
+	}
+	avg = sum / arr.length；
+	console.log(sum,avg);//输出多个逗号隔开
+求数组中的最大值(最小值同理)
+	var arr=[2,6,1,77,52,25,7];
+	var max=arr[0];
+	for (var i = 1; i < arr.length; i++){
+		if (arr[i]>max){
+			max=arr[i];
+		}
+	}
+	console.log("该数组最大值是"+max);
+数据转换为分割字符串
+	var arr=['red','green','blue','pink'];
+	var str='';
+	for ( var i = 0; i <arr.length;i++){
+		str += arr.[i]+"|";
+	}
+	console.log(str);
+新增数组元素
+	通过修改length长度
+		var arr = ['red','blue','green'];
+		console.log(arr.length);
+		arr.length = 5;  //把数组长度修改为5
+		console.log(arr);
+	通过修改索引号  追加数组索引号
+		var arr1 = ['red','blue','green'];
+		arr1[3] = 'pink';
+		console.log(arr1);
+		arr1[0] = 'pink';  //替换原来的元素
+		console.log(arr1);
+		arr1 ="123";
+		console.log(arr1);  // 不能直接给数组赋值，否则数组元素都没有了
+新建一个数组，里面存放10个整数（1-10）
+	var arr = [ ];
+	for ( var i = 0; i < 10; i++){
+		arr[i]=i+1;
+	}
+	console.log(arr);
+筛选数组1 将[2,6,1,77,0,52,0,25,7]中大于10的元素筛选出来，放入新数组
+	var arr = [2,6,1,77,0,52,0,25,7];
+	var newArr = [ ] ;
+	var j = 0;
+	for (var i = 0; i <arr.length; i++){
+		if (arr[i] > 10){
+			newArr[j] = arr[i];
+			j++;
+		}
+	}
+	console.log(arr)；
+筛选数组2 newArr.length  开始是空 所以是0；
+	var arr = [2,6,1,77,0,52,0,25,7];
+]
+	var newArr = [ ] ;
+	for (var i = 0; i <arr.length; i++){
+		if (arr[i] > 10){
+			newArr[newArr.length] = arr[i];	
+		}
+	}
+	console.log(newArr)；
+删除指定数组 将[2,6,1,77,0,52,0,25,7]中的0去掉，形成一个不包含0的新数组
+	var arr = [2,6,1,77,0,52,0,25,7];
+	var newArr = [ ];
+	for (var i = 0;i<arr.length ;i++){
+		if ( arr[i] != 0){
+			newArr[newArr.length] = arr[i];
+		}
+	} 
+	console.log(newArr)；
+翻转数组  ['red','blue','green']的内容翻转过来
+	var arr = ['red','blue','green'];
+  	var newArr = [ ];
+	for ( var i = arr.length; i >= 0; i--){
+		newArr[newArr.length] = arr[i];
+	}
+	console.log(newArr);
+冒泡排序
+	var arr = ['5','4','3','2','1']
+	for ( var i = 0;i <= arr.length -1; i++){
+		for ( var j = 0; j <= arr.length - i - 1; j++){
+			if (arr[j] > arr[j + 1]){
+			var temp = arr[j];
+			arr[j] = arr[j + 1];
+			arr[j + 1] = temp;
+			}
+		}
+	}
+	console.log(arr);
+函数
+	function 函数名（） {   
+		函数体
+	}
+	函数名（）;调用函数一定要有括号
+	声明函数的关键字 function  函数名一般是动词 函数不调用自己不执行
+
+1-100的累加和
+	function getSum() {
+		var sum = 0;
+		for (var i = 1; i <= 100; i++){
+	 		sum += i;
+		}
+		console.log(sum);
+	}
+	getSum();
+函数参数 形参和实参 形参接收使参
+	function 函数名（形参1，形参2，...） {   //声明形参
+		函数体
+	}
+	函数名（实参1，实参2，...）//调用实参
+任意数的累加
+ 	funtion getSum(start,end){
+		var sum = 0;
+		for (var i = start; i<= end; ){
+		sum+=i;
+		}
+		console.log(sum);
+	}
+	getSum(1,100);
+retrun函数返回
+	function （）{
+		return 需要返回的结果；
+	}
+	函数名（）；
+案例1
+	function getResult(){
+		reture 666;
+	}
+	getResult()；
+	console.log(getResult（）)；
+案例2
+	function getResult(aru){
+		reture aru;
+	}
+	getResult()；
+	console.log(getResult（'123'）)；
+求任意两个数
+	function getResult(num1,num2){
+		reture num1 + num2;
+	}
+	console.log(getResult（1,2）)；
+利用函数，求两个数的最大值
+	function getMax（num1,num2）{
+		if (num1>num2){
+			return num1;
+		}else{
+			return num2;
+		}
+		//三元运算 return num1>num2 ? num1 :  num2;
+	}
+	console.log(getMax（1,3）)；
+	console.log（getMax(11,3)）;
+return 终止函数
+	function getSum(){
+		return num1+num2;
+		alert('123');//这句没有被执行
+	}
+	console.log(getSum(1,2));
+	return 只能返回一个值
+	函数有return返回return后面的值，没有回复undefined
+总结 break continue return
+	break：结束当前的循环体
+	continue：跳出本次循环，继续执行下一次循环
+	return：不仅可以退出循环，还能够返回return语句中的值，同时还可以结束当前的函数体内的代码
+arguments的使用
+	function fn(){
+		console.log(arguments);//里面存储了所有传递过来的实参
+		console.log(arguments[2]);
+		//遍历数组
+		for（var i=0;i<arguments.length;i++）{
+			console.log(argumenrs[i]);
+		}
+	}
+	fn(1,2,3);
+	fn(1,2,4,3,5);
+伪数组
+	1.具有数组length属性
+	2.按照索引的方式进行索引
+	3.没有真正数组的一些方法 pop（） push（）等等
+求任意个数的最大值
+	function getMax（）{
+		var max=arguments[0];
+		if(arguments[i]>max){
+			max=arguments[i];
+		}
+	return max;
+	}
+	console.log(getMax(1,2,3,55));
+利用函数封装，翻转函数
+		function reverse(arr){
+			var newArr = [ ];
+			for (var i = arr.length; i >= 0;i-- )
+			{
+				newArr[newArr.length]=arr[i];
+			}
+			return newArr;
+		}
+		var arr1= reverse([1,2,3,4,5])
+		console.log(arr1);
+利用函数，判断闰年
+	function isRunYear(year){
+		if(year % 4 ==0 && year %100!=0 || year % 400 == 0){
+			return ‘闰年’;
+		}else{
+			return ‘平年’;
+		}
+	}
+	console.log(isRunYear(2000));
+函数调用
+	function backDay(){
+		var year = prompt("年份");
+		if (isRunYear(year))
+		{
+			alert('28');
+		}else
+		{
+			alert('28');
+		}
+	}
+	backDay();
+
+	function isRunYear(year){
+		
+		var flag = false;
+		if(year % 4 == 0 && year % 100 !=0 || year % 400 == 0){
+			flag = true;
+		}
+			return flag;
+	}
+函数声明 1 关键自自定义
+	function fn（）{
+	
+	}
+	fn()
+
+	2 函数表达式
+	var 变量名 = function（）{}
+	var fun = function(){
+		console.log("123");
+	}
+	fun(); fun是变量名 两者声明方式差不多 只不过变量里面存的是值 而函数表达式存的是函数 函数表达式也可以进行传递参数
+
+js作用域（es6） 全局作用域 
+	全局作用域 整个script标签或者是一个单独的js文件
+	var num = 10;
+	局部作用域 在函数内部 这个代码的名字只在函数内部其效果作用
+	function  fn(){
+		//局部作用域 （函数作用域）
+	}
+根据作用域的不同变量可以分为
+	全局变量 
+	var num = 10; //num就是一个全局变量 如果在函数内部没有声明直接赋值的变量也是全局变量
+	局部变量 在局部作用下的变量 函数的形参也可以看作是局部变量
+	function fun(){
+		var num1 = 10; //num1就是局部变量	
+	}
+	fun();
+	从执行效率来看，全局变量只有浏览器关闭的时候才会销毁，比较占内存，局部变量在函数内部使用，当其代码块被执行时，会初始化；运行借宿就会销毁，更节省内存空间
+了解 js没有块级作用域 js是在es6的使用新增的块级作用域
+	作用域{} if{} for{} 
+作用域链	
+对象
+	字面量创建对象 var object = {};
+	//案例
+	var obj ={
+		uname:‘132’，
+		age: 18，
+		sex:'男'，
+		sayHi:function(){
+			console.log("Hi")；
+		}
+
+	}	
+使用对象
+ 调用对象的属性 对象名.属性名  console.log（obj.uname） 
+	          对象名['属性名'] console.log(obj['age']);
+调用对象方法 对象名.方法名（）obj.sayHi()
+利用new Object  创建对象
+	
+	var mr = new Object();
+	mr.uname = '鸣人';
+	mr.sex = '男';
+	mr.age = 19;
+	mr.skill = function(){
+		console.log("影分身");
+	}//每个属性和方法之间分号结束； 利用等号赋值方法 添加对象的属性和方法
+	console.log(mr.uname);
+	console.log(mr['sex']);
+	mr.skill();
+
+构造函数
+	function 构造函数名（）{
+		this.属性 = 值；
+		this.方法 =fucntion(){}
+	}
+	new 构造函数名（）；
+	//案例
+	function Star(uname,age,sex){ //构造函数首字母大写
+		this.name  = uname;
+		this.age = age;
+		this.sex = sex;
+		this.sing = function(sang){
+			console.log(sang);
+		}
+	}
+	var ldh = new Star('刘德华'，18,'男')； //构造函数不需要return就可以返回结果
+	console.log（typeof ldh） 调用对象返回的是一个对象
+	console.log(ldh.name);
+	console.log(ldh[‘sex’])；
+	ldh.sing('冰雨')
+	var zxy = new Star('张学友',18,'男') 调用构造函数必须使用new 只要调用函数就创建一个对象ldh
+	利用构造函数创建对象的过程我们成为对象实例化
+	//课后习题
+	function Hero(name,type,blood,attack){
+		this.name = name;
+		this.type = type;
+		this.blood = blood;
+		this.attack = attack;
+	}
+	var hy = new  Hero('后裔','射手',100,'远程');
+	console.log(hy.name);
+	var lp = new  Hero('廉颇','力量',500,'近战');
+	console.log(lp.name)；
+new关键字执行过程 在内存创建一个空的对象 this就会指向刚才创建的空对象 给对象添加属性和方法 返回对象
+	创建一个新的对象 让this指向这个新对象 执行函数代码 添加属性和方法 返回新对象
+遍历对象 for in 语句
+	for(变量 in 对象)
+	 var obj = {
+		uname:'132',
+		age: 18,
+		sex:'男',
+		fn:function(){}
+	}	
+	for (var k in obj )
+	{
+		console.log(k); //属性名
+		console.log(obj[k]);//属性值
+	}
+	//使用for in里面的变量 喜欢K 或者 key
+Math
+	console.log(Math.PI);
+	console.log(Math.max(1,99,3));
+	console.log(Math.min(-1,10,3));
+	console.log(Math.max(1,99,'123'))//NAN 非数字
+	console.log(Math.max())；//-infinity	
+封装数学对象
+	var myMath = {
+		pi:3.141592653;
+		max:function(){
+			var max = arguments[0];
+			for(var i = 1; i<argument.length; i++){
+				max = argument[i];
+			}
+		renturn max;
+		}	
+	}
+	console.log(Math.max(1,5,2,9));
+绝对值的方法
+	console.log（Math.abs(1)）// 1
+	console.log（Math.abs(-1)）// 1
+	console.log（Math.abs('-1')）// 1 隐式转换
+取整数的方法
+	//Math.floor() 向下取整 往小取
+	console.log(Math.floor(1.1))//1
+	console.log(Math.floor(1.9))//1
+	//Math.ceil()向下取整 往大去
+	console.log(Math.ceil(1.1))//2
+	console.log(Math.ceil(1.9))//2	
+	//Math.round()四舍五入 
+	console.log(Math.round(1.1))//1
+	console.log(Math.round(1.5))//2
+	console.log(Math.round(1.9))//2
+	console.log(Math.round(-1.1))//-1
+	console.log(Math.round(-1.5))//1 5往大取
+随机方法 random()
+	console.log(Math.random())
+	function getRandom(max,min){
+		return Math.floor(Math.random()*（max-min +1）)+min
+	}
+	console.log(getRandom(1,10));
+	随机点名
+	var arr = ['1','2','3','qw','qwe'];
+	console.log(arr[getRandom(0,arr.length-1)]);
+猜数字游戏
+	function getRandom(max,min){
+		return Math.floor(Math.random()*(max - min + 1)) + min;
+	}
+	var random = getRandom(1,10);
+	while (true)
+	{
+		var num =prompt("输入1-10之间的数字");
+		if (num>random)
+		{
+			alert("大");
+		}
+		else if(num<random)
+		{
+			alert("小");
+		}else{
+			alert("对");
+			break;
+		}
+	}
+	
+Data()
+	var arr = new Array(); 创建一个数组对象
+	var obj = new Object();创建一个对象实例
+
+	var date = new Date();
+	console.log(date);
+	参数写法
+	var date1 = new Date(2019,10,1);
+	console.log(date1);
+	var date2 = new Date('2019-10-1')
+	date.getFullYear();//语法
+	console.log(date.getFullYear());
+	console.log(date.getMoth() + 1 );(0-11是月份，所以要加1 )
+	getDate、geyDay()周日0-周六6、get()
+年月日
+	var date = new Date();//这句不能忘 使用date必须先创建
+	var year = date.getFullYear();
+	var month = date.getMonth() + 1;
+	var dates = date.getDate();
+	var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+	var day = date.getDay();
+	console.log('现在是北京时间：'+ year + '年' + month + '月' + dates + '日' + arr[day]);
+时分秒	var date = new Date();
+	console.log(date.getHoues());
+	console.log(date.getMinutes());
+	console.log(date.getSeconds());
+封装函数时分秒
+	function getTime(){
+		var time = new Date();
+		var hours = time.getHours();
+		hours = hours < 10? "0" + hours :hours;
+		var minutes = time.getMinutes();
+		minutes = minutes < 10? "0" + minutes : minutes;
+		var seconds = time.getSeconds();
+		seconds = seconds < 10? "0" + seconds : seconds;
+		return hours + ":" + minutes + ":" + seconds;
+	}
+	console.log(getTime());
+毫秒数 距离1970.1.1的总毫秒
+	var date =new Date();
+	//valueof
+	console.log(date.valueOf());
+	//getTime
+	console.log(date.getTime());
+	//常用的
+	var date1 = +new Date();
+	console.log(date1);
+	//H5新增
+	console.log(Date.now());
+倒计时
+	function countDown(time){
+			var now = +new Date();//返回当前时间总的毫秒数
+			var input = +new Date(time);//返回的是用户输入时间总的毫秒数
+			var times = (input - now)/1000;//剩余时间
+			var d = parseInt(times / 60 / 60 /24);
+			d = d < 10 ? '0' + d : d ;
+			var h = parseInt(times / 3600 % 24);
+			h = h < 10 ? '0' + h : h ;
+			var m = parseInt(times / 60 % 60);
+			m = m < 10 ? '0' + m : m ;
+			var s = parseInt(times % 60);
+			s = s < 10 ? '0' + s : s ;
+			return d +'天' + h +'时' + m +'分' + s + '秒';
+		}
+	console.log(countDown('2021-8-27 23:00:00'));
+数组对象
+	检测是否为数组 instanceof 运算符 用来检测是否为数组
+	var arr = []；
+	var obj = {};
+	console.log(arr instranceof Array);
+	console.log(obj instranceof Array);
+换肤效果
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		ul{
+			display:flex;
+			list-style-type:none;
+			margin:200px auto;
+			width:200px;
+			height:80px;
+		}
+		li{
+			flex:1;
+			border:1px solid black;
+			text-align:center;
+			line-height:80px;
+			
+			
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>红色</li>
+		<li>蓝色</li>
+		<li>绿色</li>
+	</ul>
+	<script type="text/javascript">
+		var bts = document.querySelector('ul').querySelectorAll('li');
+		var arr=['red','green','blue'];//为什么直接使用数组方式不行？？
+		for (var i = 0;i < bts.length ;i++ )
+		{
+			bts[i].style.backgroundColor= arr[i];
+			bts[i].onclick = function(){
+				document.body.style.backgroundColor = this.style.backgroundColor;
+			}
+		}
+	</script>
+</body>
+表格隔行变色
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		table{
+			wdith:800px;
+			margin:100px auto;
+			text-align:center;
+			border-collapse:collapse;
+			font-size:14px;
+		}
+		thead tr{
+			height: 30px;
+			background-color:skyblue;
+		}
+		tbody tr{
+			height:30px;
+		}
+		tbody dt{
+			border-bottom:1px solid #d7d7d7;
+			font-size:12px;
+			color: blue;
+		}
+		.bg{
+			background-color:red;
+		}
+	</style>
+</head>
+<body>
+	<table width="200" border="1">
+		<thead>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+		</tbody>
+		
+		
+	</table>
+	<script type="text/javascript">
+		var tb = document.querySelector('tbody').querySelectorAll('tr');
+		for (i=0;i<tb.length ;i++ )
+		{	
+			//鼠标经过
+			tb[i].onmouseover = function(){
+				this.className = 'bg';
+			} 
+			//鼠标离开
+			tb[i].onmouseout = function(){
+				this.className= '';
+			}
+		}
+	</script>
+</body>
+全选效果
+<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		table{
+			wdith:800px;
+			margin:100px auto;
+			text-align:center;
+			border-collapse:collapse;
+			font-size:14px;
+		}
+		thead tr{
+			height: 30px;
+			background-color:skyblue;
+		}
+		tbody tr{
+			height:30px;
+		}
+		tbody dt{
+			border-bottom:1px solid #d7d7d7;
+			font-size:12px;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<table width="200" border="1">
+		<thead>
+			<tr>
+				<td><input type="checkbox"  id = 'js_All' /></td>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+		</thead>
+		
+		<tbody id='js_box'>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+
+		//全选取消全选
+		//获取元素
+		var all = document.getElementById('js_All');
+		var box = document.getElementById('js_box').getElementsByTagName('input');
+		//全选
+		all.onclick = function(){
+			for (var i = 0;i<box.length ;i++ )
+			{
+				box[i].checked = this.checked;
+			}
+		}
+		//单选
+		for (var i= 0;i < box.length;i++ )
+		{	
+			box[i].onclick = function(){
+				var flag = true;
+				for (var j = 0;j<box.length ;j++ )
+				{
+					if (!box[j].checked)
+					{
+						flag = false;
+						break;//退出for循环
+					}
+				}
+				all.checked = flag;
+			}
+		}
+	</script>
+</body>
+</body>
+获取元素自定义值 设置属性值 移除属性
+<div id="demo" index='1' clss='nav'></div>
+	<script type="text/javascript">
+		var div = document.querySelector('div');
+		//获取元素属性
+		//element.属性; 获取内置属性
+		console.log(div.id);
+		//element.getAttribute('属性');获得自定义属性（标准），
+		console.log(div.getAttribute('id'));
+		//设置属性值
+		//element.属性 = '';
+		div.id = 'text';
+		div.className='navs';
+		//element.setAttribute('属性'，'值');自定义
+		div.setAttribute('index',2);
+		div.setAttribute('class','footer');//class特殊写的就是class
+		//移除属性 removeAttribute('属性')
+		div.removeAttribute('index');
+	</script>
+tab切换
+	<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+		.tab{
+			margin:100px auto;
+			width:800px;
+			height:500px;
+		}
+		 .tab_list{
+			position: relative;
+			background-color: #f7f7f7;
+			border: 1px solid #eee;
+			border-bottom: 1px solid #e4393c;
+			display: block;
+		}
+		.tab_list ul{
+			list-style-type:none;	
+		}
+		.tab_list li{
+			padding:10px 25px;
+			position: relative;
+			display: inline-block;			
+		}
+		.tab_list .current{
+			background-color:#c81623;
+			color:#fff;
+		}
+		.item_info{
+			padding:20px 0  0 20px;
+		}
+		.item{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab">
+		 <div class="tab_list">
+			 <ul>
+				<li class="current">产品介绍</li>
+				<li>规格与包装</li>
+				<li>售后保障</li>
+				<li>商品评价</li>
+				<li>手机社区</li>
+			</ul>
+		</div>
+		<div class="tab_con">
+			<div class="item" style='display:block'>1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+			<div class="item">5</div>
+		</div> 
+	</div>
+	<script type="text/javascript">
+		var lis = document.querySelector('.tab_list').querySelectorAll('li');
+		var item = document.querySelector('.tab_con').querySelectorAll('.item');
+		for (var i=0;i<lis.length ;i++ )
+		{	
+			lis[i].setAttribute('index',i);
+			lis[i].onclick = function(){
+				//先让所有的li清除
+				for (var i = 0 ;i < lis.length ;i++)
+				{
+					lis[i].className = '';
+				}
+				//留下自己
+				this.className = 'current';
+				//显示内容模块 选项卡一一对应
+				var index = this.getAttribute('index');
+				//排他思想
+				for (var i = 0; i < item.length;i++ )
+				{
+					item[i].style.display = 'none';
+				}
+				//显示
+				item[index].style.display = 'block';
+			}
+		}
+	</script>
+H5自定义属性
+	为了规范 自定义属性一定要data-开头作为属性名并且赋值
+	获取自定义属性
+	1.兼容 element.getAttribute('');
+	2.H5新增 element.dataset.index或者 element.dataset['index'] ie 11 才开始支持 只能获取data开头的
+	如果自定义属性里面又多个连接单词使用驼峰命名 data-list-name = dataset.listName
+节点操作
+	父节点parentNode
+	<div class='a1'></div>
+	node.parentNode 找的是父亲
+	子节点firstChild 第一个节点
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	<script type="text/javascript">
+		var li = document.querySelector('ul');
+		//1firstChild
+		console.log(li.firstChild);
+		console.log(li.lastChild);
+		//2firstElementChild
+		console.log(li.firstElementChild);
+		console.log(li.lastElementChild);
+		//3实际开发写法
+		console.log(li.children[2]);
+		console.log(li.children[ol.children.length-1]);//最后一个
+	</script>
+下拉菜单
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	
+		ul{
+			list-style-type:none;
+		}
+		.nav{
+			width:600px;
+			height:400px;
+			margin:200px auto;
+			text-align:center;
+		}
+		.nav ul{
+			display:none;
+			
+		}
+		.item{
+			float:left;
+			width:200px;
+		}
+		.item a{
+			text-decoration:none;
+			padding:38px 50px;
+			display:block;
+			background-color: #f7f7f7;
+		}
+		.item li{
+			padding:38px 50px;
+			background-color:red;
+
+		}
+		.item .current{
+			background-color:#c81623;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li class='item'>
+			<a href="#" class='current'>1</a>
+			<ul >
+				<li>1</li><li>2</li><li>3</li>
+			</ul>
+		</li>
+		<li class='item'>
+			<a href="#">2</a>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</li>
+		<li class='item'>
+			<a href="#">3</a>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</li>
+	</ul>
+	<script type="text/javascript">
+		var nav = document.querySelector('.nav');
+		var lis = nav.children;
+		for (var i = 0; i < lis.length;i++ )
+		{
+			lis[i].onclick = function(){
+				for (var i = 0 ;i < lis.length ;i++)
+				{
+					lis[i].children[0].className = '';
+					lis[i].children[1].style.display = 'none';
+				}
+				this.children[0].className = 'current';
+				this.children[1].style.display = 'block';
+			}
+			lis[i].onmouseover = function(){
+				this.children[1].style.display = 'block';
+			}
+			lis[i].onmouseout = function(){
+				this.children[1].style.display = 'none';
+			}
+		}
+	</script>
+兄弟节点
+	nextSibling 下一个兄弟节点包含元素节点 文本节点
+	previousSibling 上一个节点
+	IE9以上使用下面
+	nextElementSibling 得到下一个兄弟元素节点
+	previousElementSibling 上一个节点
+创建元素节点
+	<body>
+	<ul>
+		<li>123</li>
+	</ul>
+	<script type="text/javascript">
+		//创建节点
+		var li = document.createElement('li');
+		//添加节点 node.appendChild(child) node父级 
+		var ul = document.querySelector('ul');
+		ul.appendChild(li);//node.appendChild()方法将一个节点添加到指定父节点的子节点列表末尾
+		//node.insertBefore{child,指定元素} 将一个节点添加到父节点的指定子节点前面
+		var lili = document.createElement('li');
+		ul.insertBefore(lili,ul.child[0]);
+		//页面添加一个新的元素 创建 - 添加
+	</script>
+</body>
+简单的留言板
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+	<button>发布</button>
+	<ul>
+	</ul>
+	<script type="text/javascript">
+	//点击按钮 动态创建一个li 添加到ul 
+	//创建li的同时 把文本内容赋值到li(innerHTML) 
+	//如果要新的留言后面显示就用appendChild 在前面就用insetBefore
+	//获取元素
+		var text = document.querySelector('textarea');
+		var btn = document.querySelector('button');
+		var ul = document.querySelector('ul');
+		btn.onclick = function(){
+			if (text.value == '')
+			{
+				alert('请输入内容');
+				return false;
+			}else{
+				//创建元素
+				var li = document.createElement('li');
+				var t =new Date();
+				//赋值
+				li.innerHTML = text.value ;
+				//添加元素
+				//ul.appendChild(li);
+				ul.insertBefore(li,ul.children[0]);
+				
+				text.value= '';
+				
+			}
+		}
+	</script>
+删除节点 removeChild 
+	<body>
+<button>删除</button>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	<script type="text/javascript">
+		var ul = document.querySelector('ul');
+		var lis = document.querySelector('li');
+		var btn = document.querySelector('button');
+		btn.onclick = function(){
+			ul.removeChild(ul.children[0]);
+		}
+	</script>
+</body>
+留言板删除
+	var a= document.querySelectorAll('a');
+				for (var i= 0;i<a.length ;i++ )
+				{
+					a[i].onclick= function(){
+						//node.removeChild(child)删除的li
+						ul.removeChild(this.parentNode);
+					}
+				}
+复制节点 node.cloneNode()
+动态创建操作
+<body>
+	<table>
+		<thead>
+			<tr>
+				<td>姓名</td>
+				<td>科目</td>
+				<td>成绩</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		var datas = [{
+			name:"小明",
+			subject:"数学",
+			score:99
+		},
+		{
+			name:"小明",
+			subject:"语文",
+			score:97
+		},
+		{
+			name:"小明",
+			subject:"链接",
+			score:96
+		}];
+		var tbody= document.querySelector('tbody');
+		for (var i =0;i<datas.length ;i++ )
+		{	//外面管行
+			var tr=document.createElement('tr');
+			tbody.appendChild(tr);
+			//里面管列
+			for (var k in datas[i] )
+			{	//创建单元格
+				var td = document.createElement('td');
+				td.innerHTML = datas[i][k];
+				tr.appendChild(td);
+				
+			}
+			//创建操作单元格
+			var td = document.createElement('td');
+			td.innerHTML= "<a href= 'JavaScript:;'>删除</a>"
+			tr.appendChild(td);
+		}//创建删除操作
+		var a = document.querySelectorAll('a');
+		for (var i =0;i<a.length ;i++ )
+		{
+			a[i].onclick= function(){
+				tbody.removeChild(this.parentNode.parentNode);
+			}
+		}
+	</script>
+</body>
+组事件织冒泡 e.stopPropagation() stop 传播 e.cancelBubbla=true
+事件委托 原理：不是每个子节点单独设置事件监听器，而是事件监听器设置在其父节点上，然后利用冒泡原理影响设置每个节点
+	给ul注册点击事件，然后利用事件对象的traget来找到当前点击的li，因为点击li,事件会冒泡到ul上ul有注册事件，就会触发事件监听器
+		<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script type="text/javascript">
+		var ul =document.querySelector('ul');
+		ul.addEventListener('click',function(){
+			alert('123');
+		})
+	</script>
