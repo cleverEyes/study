@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color:#f1f1f7;
+			display:flex;
+			/* 让子元素垂直显示*/
+			flex-direction: column;
+			/* 子元素水平对齐 */
+			justify-content: center;
+			/* 子元素居中 */
+			align-items: center;
+			height: 100vh;
+		}
+		.keyboard{
+			/*文字无法选择*/
+			user-select:none;
+			/*指针变手*/
+			cursor:pointer;
+		}
+		.key{
+			display:flex;
+			/*去掉小圆点*/
+			list-style-type:none;
+			}
+			li{
+			 /*加阴影*/
+			 box-shadow:0 -6px 10px rgba(255,255,255),0 4px 15px rgba(0,0,0,0.3);
+			/*定义每个键的大小 距离 文字大小 */
+			height:5em;
+			width:5em;
+			font-size:1em;
+			margin: 0.3em;
+			background-color:#f2f2f2;
+			/*圆角*/
+			border-radius: 15px;
+			-webkit-border-radius:15px ;
+			-moz-border-radius:15px ;
+			-ms-border-radius:15px ;
+			-o-border-radius:15px ;
+			/*文字上下左右居中*/
+			text-align:center;
+			line-height:5em;
+			/*添加单词键的字母间距*/
+			letter-spacing:2px;
+			/*加点过度让效果更平滑*/
+			transition:all 0.25s;
+		}
+		/*点击有阴影效果*/
+		li:active{
+			box-shadow:0 0 4px 0 rgba(0,0,0,.15);
+			color:rgba(12,164,198);
+			text-shadow:0 0 15px #57c1f1;
+		}
+		/*设置每行的颜色*/
+		.one{
+			color:#ebf33;
+		}
+		.two{
+			color:#df960e;
+		}
+		.three{
+			color:#2b46df;
+		}
+		.four{
+			color:rgb(57,194,75);
+		}
+		.five{
+			color:#8919ca
+		}
+		.six{
+			color:#e73d09
+		}
+		/*调整特殊按键的宽度*/
+		.Tab,.Esc{
+			width:9em;
+		}
+		.backspace{
+			width:9.1em;
+		}
+		.Caps{
+			width:10em;
+		}
+		.Enter{
+			width:10.5em;
+		}
+		.Shift{
+			width:13em;
+		}
+		.Ctrl,.Win,.Alt,.book{
+			width:6.3em;
+		}
+		
+		.space{
+		width:34.5em;
+		}
+	</style>
+</head>
+<body>
+	<div class="keyboard">
+		<ul class="key one">
+			<li class="Esc">esc</li>
+			<li>f1</li>
+			<li>f2</li>
+			<li>f3</li>
+			<li>f4</li>
+			<li>f5</li>
+			<li>f6</li>
+			<li>f7</li>
+			<li>f8</li>
+			<li>f9</li>
+			<li>f10</li>
+			<li>f11</li>
+			<li>f12</li>
+			<li>f12</li>
+		</ul>
+		<ul class="key two">
+			<li>`</li>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>0</li>
+			<li>-</li>
+			<li>+</li>
+			<li class="backspace">-</li>
+		</ul>
+		<ul class="key three">
+			<li class="Tab">tab</li>
+			<li>Q</li>
+			<li>W</li>
+			<li>E</li>
+			<li>R</li>
+			<li>T</li>
+			<li>Y</li>
+			<li>U</li>
+			<li>I</li>
+			<li>O</li>
+			<li>P</li>
+			<li>[</li>
+			<li>]</li>
+			<li>\</li>
+		</ul>
+		<ul class="key four">
+			<li class="Caps">Caps Lock</li>
+			<li>A</li>
+			<li>S</li>
+			<li>D</li>
+			<li>F</li>
+			<li>G</li>
+			<li>H</li>
+			<li>J</li>
+			<li>K</li>
+			<li>L</li>
+			<li>;</li>
+			<li>'</li>
+			<li class="Enter">enter</li>
+		</ul>
+		<ul class="key five">
+			<li class="Shift">shift</li>
+			<li>Z</li>
+			<li>X</li>
+			<li>C</li>
+			<li>V</li>
+			<li>B</li>
+			<li>N</li>
+			<li>M</li>
+			<li>,</li>
+			<li>.</li>
+			<li>/</li>
+			<li class="Shift">shift</li>
+		</ul>
+		<ul class="key six">
+			<li class="Ctrl">Ctrl</li>
+			<li class="Win">Win</li>
+			<li class="Alt">Alt</li>
+			<li class="space">space</li>
+			<li class="Alt">Alt</li>
+			<li class="Win">Win</li>
+			<li class="book">其他</li>
+			<li class="Ctrl">Ctrl</li>
+		</ul>
+	</div>
+	
+</body>
+</html>
